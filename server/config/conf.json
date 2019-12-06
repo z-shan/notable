@@ -1,0 +1,23 @@
+{
+    "server": {
+        "port": 8080
+    },
+    "database": {
+        "protocol": "mongodb://",
+        "host": "localhost",
+        "port": "27017",
+        "name": "notable-health",
+        "username": "notableadmin",
+        "password": "zLKt3aQ72K8nSrXx"
+    },
+    "logger": {
+        "directory": "./",
+        "level": "info"
+    },
+    "secret": "notablehealth",
+    "cookie" : {
+        "name": "auth_session",
+        "authKey": "jwt",
+        "userIdKey": "id"
+    }
+}

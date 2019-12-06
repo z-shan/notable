@@ -26,12 +26,9 @@ app.use('/client', express.static(path.resolve(__dirname, '../../../dist/client'
 
 app.use(require('request-id-middleware'));
 
-app.use('/api/data', require('routes/dataRoutes')(require('models/data'), logger));
+app.use('/api/appointments', require('routes/appointmentRoutes')(require('models/appointment'), logger));
+app.use('/api/physicians', require('routes/physicianRoutes')(require('models/physician'), logger));
 
-// app.get('*', function(req, res) {
-//     // res.sendFile(path.join(__dirname, '../client/index.html'));
-//     res.sendFile(path.join(__dirname, '../../../dist/client/index.html'));
-// });
 
 process.on('uncaughtException', function(error) {
     logger.error('Uncaught Exception', error);

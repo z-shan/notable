@@ -4,12 +4,12 @@ import { catchError, tap } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
 
 @Injectable()
-export class DataService {
-    private requestUrl = '/api/data';
+export class AppointmentsService {
+    private requestUrl = '/api/appointments';
     constructor(private http: HttpClient) {}
 
-    getData(): Observable<any> {
-        return this.http.get(this.requestUrl)
+    getAppointmentsByPhysicianId(physicianId): Observable<any> {
+        return this.http.get(this.requestUrl + '/physician/' + physicianId)
             .pipe(
                 catchError(err => throwError(err))
             );

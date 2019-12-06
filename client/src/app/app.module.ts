@@ -6,7 +6,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppBootstrapModule } from './shared/modules/app-bootstrap.module';
-import { DataService } from './shared/services/data.service';
+import { PhysicianService } from './shared/services/physician.service';
+import { AppointmentsService } from './shared/services/appointments.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { DataService } from './shared/services/data.service';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [DataService],
+  providers: [PhysicianService, AppointmentsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

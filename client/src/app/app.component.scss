@@ -4,35 +4,9 @@
         display: flex;
         width: 100%;
     }
-    .plist {
-        padding: 40px;
-        background-color: #e8e8e8;
-
-        li.active {
-            background-color: #337ab7;
-        }
-    }
 
     .alist {
         flex: 1;
         padding: 40px;
-    }
-
-    .physician-detail {
-        .name {
-            font-size: 55px;
-        }
-        .email {
-            font-size: 22px;
-        }
-    }
-
-    .logout {
-        text-align: center;
-        margin-top: 45px;
-
-        button {
-            width: 40%;
-        }
     }
 }

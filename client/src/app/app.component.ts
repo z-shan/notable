@@ -11,32 +11,8 @@ import { IPhysician } from './shared/models/physician.model';
 })
 export class AppComponent implements OnInit {
   title = 'client';
-  physicians: IPhysician;
-  appointments: IAppointment[];
-  selectedPhysician: IPhysician[];
 
-  constructor(private appointmentsService: AppointmentsService,
-              private physicianService: PhysicianService) {}
+  constructor() {}
 
-  ngOnInit() {
-    this.getPhysicians();
-  }
-
-  getPhysicians() {
-    this.physicianService.getPhysicians()
-      .subscribe(data => {
-        this.physicians = data.result;
-        this.getAppointments(this.physicians[0]);
-      });
-  }
-
-  getAppointments(physician) {
-    console.log('line 40', physician);
-    this.selectedPhysician = physician;
-    this.appointmentsService.getAppointmentsByPhysicianId(physician._id)
-      .subscribe(data => {
-        this.appointments = data.result;
-        console.log(data);
-      });
-  }
+  ngOnInit() {}
 }

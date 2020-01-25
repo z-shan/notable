@@ -1,0 +1,22 @@
+<div class="alist">
+    <div class="appointments-list table-responsive">
+        <table class="table">
+            <thead>
+                <tr class="info">
+                <th>#</th>
+                <th>Name</th>
+                <th>Time</th>
+                <th>Kind</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let appointment of appointments; index as i">
+                <td>{{i+1}}</td>
+                <td>{{appointment.name}}</td>
+                <td>{{appointment.time}}</td>
+                <td>{{appointment.kind}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

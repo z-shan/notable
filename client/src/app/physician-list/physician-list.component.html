@@ -1,0 +1,18 @@
+<div class="plist">
+    <div class="header">
+        <h1>Notable</h1>
+    </div>
+    <div class="section">
+        <h3>Physicians</h3>
+        <div class="physician-list">
+        <ul class="list-group">
+            <li *ngFor="let physician of physicians" class="list-group-item" (click)="setPhysician(physician)" [ngClass]="{'active': selectedPhysician == physician}">
+            <span>{{physician.lastName}}, {{physician.firstName}}</span>
+            </li>
+        </ul>
+        </div>
+    </div>
+    <div class="logout">
+        <button class="btn btn-primary">Logout</button>
+    </div>
+</div>
